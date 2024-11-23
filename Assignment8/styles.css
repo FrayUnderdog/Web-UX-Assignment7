@@ -1,0 +1,144 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main {
+    margin: 20px;
+    width: 80%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    display: flex; /* Aligns content horizontally */
+    justify-content: space-between; /* Pushes content to opposite sides */
+    align-items: center; /* Vertically centers the content */
+}
+
+/* Link styles for book name */
+li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Button styles */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-left: 10px; /* Adds space between buttons */
+    border-radius: 4px; /* Rounded corners for buttons */
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Delete button specific styles */
+button:nth-child(3) {
+    background-color: #dc3545; /* Red for delete button */
+}
+
+button:nth-child(3):hover {
+    background-color: #b02a37;
+}
+
+/* Flex container for Edit and Delete buttons */
+.button-container {
+    display: flex; /* Arrange buttons in a row */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Form styles (for Create and Edit pages) */
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form button {
+    width: 100%;
+    background-color: #28a745;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* General responsive styles */
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    li {
+        flex-direction: column; /* Stack content vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .button-container {
+        margin-top: 10px;
+        gap: 5px; /* Reduce gap for smaller screens */
+    }
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
